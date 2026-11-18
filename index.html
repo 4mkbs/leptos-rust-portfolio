@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khairul | Systems & Full-Stack Engineer (Rust, Go, Python)</title>
+    <meta name="description" content="Portfolio built with Rust, Leptos, and WebAssembly." />
+    <!-- Tailwind CSS CDN for instant styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              rust: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+                800: '#9a3412',
+                900: '#7c2d12',
+              },
+              darkbg: '#0a0f1d',
+              cardbg: '#111827',
+              bordercolor: '#1f2937'
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      /* Custom glowing scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0f1d;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f97316;
+        border-radius: 4px;
+      }
+      .glow-border {
+        box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.3);
+      }
+    </style>
+    
+<script type="module">
+import init, * as bindings from '/portfolio-leptos-e686234677dd801e.js';
+const wasm = await init({ module_or_path: '/portfolio-leptos-a84a91ea0c76a286_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="modulepreload" href="/portfolio-leptos-e686234677dd801e.js" crossorigin="anonymous" integrity="sha384-sJGuovi/G7bps2+aFUUkfeGEpb+CG+A1C4zEGAgbT124aHcPJucti+zsVOlrqnxA"><link rel="preload" href="/portfolio-leptos-a84a91ea0c76a286_bg.wasm" crossorigin="anonymous" integrity="sha384-KD3WSOCN1KXB4xdB/FcHd0SsUUqtYilSx4zAd7BHzR3O14G9oSyBtIox3hyMgPjp" as="fetch" type="application/wasm"></head>
+  <body class="bg-[#0a0f1d] text-slate-100 min-h-screen selection:bg-orange-500 selection:text-white">
+  </body>
+</html>
